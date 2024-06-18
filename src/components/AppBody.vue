@@ -1,7 +1,14 @@
 <script>
   import axios from 'axios';
+  import AppMainList from './AppMainList.vue';
+  import AppSearch from './AppSearch.vue';
 
   export default {
+    components:{
+      AppSearch,
+      AppMainList
+    },
+
     data(){
       return{
         inputText:'',
@@ -17,7 +24,7 @@
           // handle success
           console.log(response.data.results);
           this.movies = response.data.results
-          
+
         })
         .catch(function (error) {
           // handle error
@@ -34,7 +41,7 @@
           // handle success
           console.log(response.data.results);
           this.series = response.data.results
-          
+
         })
         .catch(function (error) {
           // handle error
@@ -52,26 +59,22 @@
 </script>
 
 <template>
-  <main>
-    <input type="text" name="" id="search-input" v-model="inputText">
-    <button @click="getFilms(), getSeries()">search</button>
-    <ul v-for="movie in movies">
-      <li> {{ movie.title }} </li>
-      <li> {{ movie.original_title }} </li>
-      <li> {{ movie.original_language }} </li>
-      <li> {{ movie.vote_average }} </li>
-    </ul>
-    <ul v-for="serie in series">
-      <li> {{ serie.name }} </li>
-      <li> {{ serie.original_name }} </li>
-      <li> {{ serie.original_language }} </li>
-      <li> {{ serie.vote_average }} </li>
-    </ul>
-  </main>
+    <header>
+        <div id="logo"></div>
+        <input type="text" name="" id="search-input" v-model="inputText" @keyup.enter="getFilms(); getSeries()">
+    </header>
+    <main>
+      <AppMainList :movies="movies" :series="series"/>
+    </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+  @use '../styles/general.scss' as *;
 
+
+  header{
+    background-color: black;
+  }
 </style>
 
 

@@ -1,5 +1,7 @@
 <script>
-  import AppMain from './components/AppMain.vue';
+import AppBody from './components/AppBody.vue';
+
+  
 
   export default {
     data(){
@@ -8,13 +10,13 @@
       }
     },
     components:{
-      AppMain,
+      AppBody,
     }
   }
 </script>
 
 <template>
-  <AppMain/>
+  <AppBody/>
 </template>
 
 <style>

@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.en{
+    background-image: url(../flags/en-flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+}
+
+.de{
+    background-image: url(../flags/de-flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+}
+
+.it{
+    background-image: url(../flags/it-flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+}
+
+.es{
+    background-image: url(../flags/es-flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+}
+
+.fr{
+    background-image: url(../flags/fr-flag.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+}
+
+.ar,
+.am,
+.az,
+.be,
+.bn,
+.bg,
+.zh,
+.ca,
+.cs,
+.nl,
+.et,
+.el,
+.ha,
+.hi,
+.hu,
+.id,
+.ja,
+.jv,
+.km,
+.ko,
+.lv,
+.ms,
+.mr,
+.fa,
+.pl,
+.pt,
+.ro,
+.ru,
+.sw,
+.ta,
+.te,
+.th,
+.tr,
+.uz,
+.vi{
+    background-image: url(../flags/world.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 20px;
+}
